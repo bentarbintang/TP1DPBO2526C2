@@ -8,7 +8,7 @@ public class Tiket {
         
         public Tiket(){ }
         public Tiket(String namaFilm, String kodeTiket, int harga, String nomorKursi, String namaBioskop){
-                this.kodeTiket = kodeTiket
+                this.kodeTiket = kodeTiket;
                 this.namaFilm = namaFilm;
                 this.harga = harga;
                 this.nomorKursi = nomorKursi;
@@ -29,7 +29,7 @@ public class Tiket {
         }
 
         public void setnamaFilm(String namaFilm){
-                this.namaFilm;
+                this.namaFilm = namaFilm;
         }
 
         public int getHarga(){
@@ -37,7 +37,7 @@ public class Tiket {
         }
 
         public void setHarga(int harga){
-                this.harga;
+                this.harga = harga;
         }
 
         public String getnomorKursi(){
@@ -45,7 +45,7 @@ public class Tiket {
         }
 
         public void setnomorKursi(String nomorKursi){
-                this.nomorKursi;
+                this.nomorKursi = nomorKursi;
         }
 
         public String getnamaBioskop(){
@@ -53,6 +53,6 @@ public class Tiket {
         }
 
         public void setnamaBioskop(String namaBioskop){
-                this.namaBioskop;
+                this.namaBioskop = namaBioskop;
         }
 }

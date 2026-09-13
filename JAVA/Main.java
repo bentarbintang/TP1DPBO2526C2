@@ -12,12 +12,12 @@ public class Main{
         int pilihan = 0;
         while (pilihan != 6) {
             System.out.println("___ MANAGEMENT BIOSKOP ___");
-            System.out.println("1. Tambah Tiket\n");
-            System.out.println("2. Tampilkan Tiket\n");
-            System.out.println("3. Update Tiket\n");
-            System.out.println("4. Hapus Tiket\n");
-            System.out.println("5. Cari Tiket\n");
-            System.out.println("6. Keluar\n");
+            System.out.println("1. Tambah Tiket");
+            System.out.println("2. Tampilkan Tiket");
+            System.out.println("3. Update Tiket");
+            System.out.println("4. Hapus Tiket");
+            System.out.println("5. Cari Tiket");
+            System.out.println("6. Keluar");
             pilihan = scanner.nextInt();
             scanner.nextLine();
             
@@ -65,28 +65,21 @@ public class Main{
     }
 
     private static void tampilTiket() {
-        System.out.println("Daftar Tiket:");
+        System.out.println("======= Daftar Tiket =======");
         for (Tiket tiket : listTiket) {
             System.out.println("Kode Tiket: " + tiket.getkodeTiket());
             System.out.println("Nama Film: " + tiket.getnamaFilm());
             System.out.println("Harga: " + tiket.getHarga());
             System.out.println("Nomor Kursi: " + tiket.getnomorKursi());
             System.out.println("Nama Bioskop: " + tiket.getnamaBioskop());
-            System.out.println("---------------------------");
+            System.out.println("================================");
         }
     }
 
     private static void updateTiket() {
         System.out.print("Masukkan kode tiket yang ingin diupdate: ");
         String kodeTiket = scanner.nextLine();
-        Tiket tiketDitemukan = cariTiketByKode(kodeTiket);
-
-        for (Tiket tiket : listTiket) {
-            if (tiket.getkodeTiket().equals(kodeTiket)) {
-                tiketDitemukan = tiket;
-                break;
-            }
-        }
+        Tiket tiketDitemukan = cariTiket(kodeTiket);
 
         if (tiketDitemukan != null) {
             System.out.print("Masukkan nama film baru: ");
@@ -130,17 +123,19 @@ public class Main{
         }
     }
 
+    private static Tiket cariTiket(String kodeTiket) {
+        for (Tiket tiket : listTiket) {
+            if (tiket.getkodeTiket().equals(kodeTiket)) {
+                return tiket;
+            }
+        }
+        return null;
+    }
+
     private static void cariTiket() {
         System.out.print("Masukkan kode tiket yang ingin dicari: ");
         String kodeTiket = scanner.nextLine();
-        Tiket tiketDitemukan = null;
-
-        for (Tiket tiket : listTiket) {
-            if (tiket.getkodeTiket().equals(kodeTiket)) {
-                tiketDitemukan = tiket;
-                break;
-            }
-        }
+        Tiket tiketDitemukan = cariTiket(kodeTiket);
 
         if (tiketDitemukan != null) {
             System.out.println("Kode Tiket: " + tiketDitemukan.getkodeTiket());
@@ -152,6 +147,4 @@ public class Main{
             System.out.println("Tiket dengan kode " + kodeTiket + " tidak ditemukan.");
         }
     }
-
-    private
 }
