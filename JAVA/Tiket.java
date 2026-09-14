@@ -7,7 +7,7 @@ public class Tiket {
         private String namaBioskop;
         
         public Tiket(){ }
-        public Tiket(String namaFilm, String kodeTiket, int harga, String nomorKursi, String namaBioskop){
+        public Tiket(String kodeTiket, String namaFilm, int harga, String nomorKursi, String namaBioskop){
                 this.kodeTiket = kodeTiket;
                 this.namaFilm = namaFilm;
                 this.harga = harga;

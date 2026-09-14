@@ -11,16 +11,10 @@ public class Main{
 
         int pilihan = 0;
         while (pilihan != 6) {
-            System.out.println("___ MANAGEMENT BIOSKOP ___");
-            System.out.println("1. Tambah Tiket");
-            System.out.println("2. Tampilkan Tiket");
-            System.out.println("3. Update Tiket");
-            System.out.println("4. Hapus Tiket");
-            System.out.println("5. Cari Tiket");
-            System.out.println("6. Keluar");
+            tampilMenu();
             pilihan = scanner.nextInt();
             scanner.nextLine();
-            
+
             switch (pilihan) {
                 case 1:
                     tambahTiket();
@@ -46,6 +40,20 @@ public class Main{
         }
     }
 
+    private static void tampilMenu() {
+        System.out.println("+========================================+");
+        System.out.println("|          MANAGEMENT BIOSKOP             |");
+        System.out.println("+========================================+");
+        System.out.println("| 1. Tambah Tiket                         |");
+        System.out.println("| 2. Tampilkan Tiket                      |");
+        System.out.println("| 3. Update Tiket                         |");
+        System.out.println("| 4. Hapus Tiket                          |");
+        System.out.println("| 5. Cari Tiket                           |");
+        System.out.println("| 6. Keluar                               |");
+        System.out.println("+========================================+");
+        System.out.print("Pilih menu: ");
+    }
+
     private static void tambahTiket() {
         System.out.print("Masukkan kode tiket: ");
         String kodeTiket = scanner.nextLine();
@@ -53,27 +61,43 @@ public class Main{
         String namaFilm = scanner.nextLine();
         System.out.print("Masukkan harga tiket: ");
         int harga = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         System.out.print("Masukkan nomor kursi: ");
         String nomorKursi = scanner.nextLine();
         System.out.print("Masukkan nama bioskop: ");
         String namaBioskop = scanner.nextLine();
 
-        Tiket tiketBaru = new Tiket(kodeTiket, namaFilm, harga, nomorKursi, namaBioskop);
-        listTiket.add(tiketBaru);
+        listTiket.add(new Tiket(kodeTiket, namaFilm, harga, nomorKursi, namaBioskop));
         System.out.println("Tiket berhasil ditambahkan!");
     }
 
+    private static void cetakGarisTabel() {
+        System.out.println("+--------+----------------------+------------+----------+----------------+");
+    }
+
+    private static void cetakHeaderTabel() {
+        cetakGarisTabel();
+        System.out.printf("| %-6s | %-20s | %-10s | %-8s | %-14s |%n",
+                "Kode", "Nama Film", "Harga", "Kursi", "Bioskop");
+        cetakGarisTabel();
+    }
+
+    private static void cetakBarisTiket(Tiket t) {
+        System.out.printf("| %-6s | %-20s | %-10d | %-8s | %-14s |%n",
+                t.getkodeTiket(), t.getnamaFilm(), t.getHarga(), t.getnomorKursi(), t.getnamaBioskop());
+    }
+
     private static void tampilTiket() {
-        System.out.println("======= Daftar Tiket =======");
-        for (Tiket tiket : listTiket) {
-            System.out.println("Kode Tiket: " + tiket.getkodeTiket());
-            System.out.println("Nama Film: " + tiket.getnamaFilm());
-            System.out.println("Harga: " + tiket.getHarga());
-            System.out.println("Nomor Kursi: " + tiket.getnomorKursi());
-            System.out.println("Nama Bioskop: " + tiket.getnamaBioskop());
-            System.out.println("================================");
+        System.out.println("\n======= Daftar Tiket =======");
+        if (listTiket.isEmpty()) {
+            System.out.println("Belum ada data tiket.");
+            return;
         }
+        cetakHeaderTabel();
+        for (Tiket tiket : listTiket) {
+            cetakBarisTiket(tiket);
+        }
+        cetakGarisTabel();
     }
 
     private static void updateTiket() {
@@ -86,7 +110,7 @@ public class Main{
             String namaFilm = scanner.nextLine();
             System.out.print("Masukkan harga tiket baru: ");
             int harga = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
             System.out.print("Masukkan nomor kursi baru: ");
             String nomorKursi = scanner.nextLine();
             System.out.print("Masukkan nama bioskop baru: ");
@@ -106,14 +130,7 @@ public class Main{
     private static void hapusTiket() {
         System.out.print("Masukkan kode tiket yang ingin dihapus: ");
         String kodeTiket = scanner.nextLine();
-        Tiket tiketDitemukan = null;
-
-        for (Tiket tiket : listTiket) {
-            if (tiket.getkodeTiket().equals(kodeTiket)) {
-                tiketDitemukan = tiket;
-                break;
-            }
-        }
+        Tiket tiketDitemukan = cariTiket(kodeTiket);
 
         if (tiketDitemukan != null) {
             listTiket.remove(tiketDitemukan);
@@ -138,11 +155,9 @@ public class Main{
         Tiket tiketDitemukan = cariTiket(kodeTiket);
 
         if (tiketDitemukan != null) {
-            System.out.println("Kode Tiket: " + tiketDitemukan.getkodeTiket());
-            System.out.println("Nama Film: " + tiketDitemukan.getnamaFilm());
-            System.out.println("Harga: " + tiketDitemukan.getHarga());
-            System.out.println("Nomor Kursi: " + tiketDitemukan.getnomorKursi());
-            System.out.println("Nama Bioskop: " + tiketDitemukan.getnamaBioskop());
+            cetakHeaderTabel();
+            cetakBarisTiket(tiketDitemukan);
+            cetakGarisTabel();
         } else {
             System.out.println("Tiket dengan kode " + kodeTiket + " tidak ditemukan.");
         }
