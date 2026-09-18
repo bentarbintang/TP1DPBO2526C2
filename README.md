@@ -172,4 +172,5 @@ TP1DPBO2526C2/
 ---
 
 ## 5. Dokumentasi
+<img width="950" height="287" alt="Screenshot 2026-09-16 195857" src="https://github.com/user-attachments/assets/7140e329-5d81-4231-a113-82762f631ebe" />
 
