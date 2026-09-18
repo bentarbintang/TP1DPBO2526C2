@@ -172,5 +172,11 @@ TP1DPBO2526C2/
 ---
 
 ## 5. Dokumentasi
-<img width="950" height="287" alt="Screenshot 2026-09-16 195857" src="https://github.com/user-attachments/assets/7140e329-5d81-4231-a113-82762f631ebe" />
+
+```
+Dokumentasi bahasa php yang telah dijalankan di localhost
+<img width="959" height="535" alt="Screenshot 2026-09-16 200623" src="https://github.com/user-attachments/assets/e2f042a2-71e3-45c6-b243-84f8eb38b8e7" />
+
+
+
 
