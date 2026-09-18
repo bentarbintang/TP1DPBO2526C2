@@ -144,52 +144,32 @@ Semua halaman PHP memanggil `require_once 'fungsi.php'` di baris paling atas, su
 ## 4. Struktur File
 
 ```
-kuis1/
-├── README.md
-├── Main.java              (versi Java, sudah ada sebelumnya)
-├── Tiket.java
-├── cpp/
-│   ├── main.cpp
-│   ├── Tiket.h
-│   └── Tiket.cpp
-├── python/
-│   ├── main.py
-│   └── tiket.py
-└── php/
-    ├── index.php
-    ├── tambah.php
-    ├── update.php
-    ├── hapus.php
-    ├── cari.php
-    ├── Tiket.php
-    ├── fungsi.php
-    └── uploads/            (dibuat otomatis saat upload gambar pertama)
+TP1DPBO2526C2/
+├── CPP/
+│   ├── Main.cpp
+│   ├── Tiket.cpp
+│   └── program_bioskop.exe
+├── JAVA/
+│   ├── Main.class
+│   ├── Main.java
+│   ├── Tiket.class
+│   └── Tiket.java
+├── PHP/
+│   ├── Tiket.php
+│   ├── cari.php
+│   ├── fungsi.php
+│   ├── hapus.php
+│   ├── index.php
+│   ├── tambah.php
+│   └── update.php
+├── PYTHON/
+│   ├── pycache/
+│   ├── Main.py
+│   └── Tiket.py
+└── README.md
 ```
 
 ---
 
-## 5. Cara Menjalankan
+## 5. Dokumentasi
 
-**Java**
-```bash
-javac Main.java Tiket.java
-java Main
-```
-
-**C++**
-```bash
-g++ -std=c++17 -o main cpp/main.cpp cpp/Tiket.cpp
-./main
-```
-
-**Python**
-```bash
-python3 python/main.py
-```
-
-**PHP**
-```bash
-cd php
-php -S localhost:8000
-# buka http://localhost:8000/index.php di browser
-```
