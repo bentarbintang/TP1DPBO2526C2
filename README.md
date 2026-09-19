@@ -1,4 +1,4 @@
-<img width="958" height="503" alt="Screenshot 2026-09-16 200711" src="https://github.com/user-attachments/assets/ea8f35b2-ceee-4664-a426-324c61977dca" /><img width="959" height="533" alt="Screenshot 2026-09-16 200702" src="https://github.com/user-attachments/assets/1c0b155a-33a0-4586-9b31-9e87f54de7e8" /># TP1DPBO2526C2
+# TP1DPBO2526C2
 
 ## Aplikasi Management Bioskop (Multi-Bahasa)
 
@@ -177,10 +177,12 @@ Dokumentasi dan compile bahasa c++
 ```
 <img width="959" height="567" alt="image" src="https://github.com/user-attachments/assets/63abcac9-6872-4b1d-b1e9-15884969b082" />
 
+
 ```
 Dokumentasi dan compile bahasa java 
 ```
 <img width="959" height="563" alt="image" src="https://github.com/user-attachments/assets/5b8247bb-f417-4d8a-b24b-cd1164c3e2e3" />
+
 
 ```
 Dokumentasi dan compile bahasa python
@@ -192,21 +194,30 @@ Dokumentasi dan compile bahasa python
 Dokumentasi bahasa php yang telah dijalankan di localhost
 ```
 <img width="959" height="535" alt="Screenshot 2026-09-16 200623" src="https://github.com/user-attachments/assets/e2f042a2-71e3-45c6-b243-84f8eb38b8e7" />
+
+
 ```
 Tampilan beranda/home dan delete
 ```
 <img width="959" height="531" alt="Screenshot 2026-09-16 200653" src="https://github.com/user-attachments/assets/fdcfae98-56dd-40ba-8655-ef7adca886f5" />
+
+
 ```
 Tampilan tampilan ketika ingin menambahkan data tiket
 ```
 <img width="959" height="533" alt="Screenshot 2026-09-16 200702" src="https://github.com/user-attachments/assets/971759fa-984c-4026-8452-cf731f00a93f" />
+
+
 ```
 Tampilan tampilan ketika ingin mencari data tiket
 ```
 <img width="958" height="503" alt="Screenshot 2026-09-16 200711" src="https://github.com/user-attachments/assets/bd16ecf3-b18b-4d8d-b87c-b3ebb1ab0087" />
+
+
 ```
 Tampilan tampilan ketika ingin menupdate data tiket
 ```
+<img width="958" height="503" alt="Screenshot 2026-09-16 200711" src="https://github.com/user-attachments/assets/247d51db-8e95-4b55-80f2-dc64e7619d29" />
 
 
 
